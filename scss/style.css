@@ -86,8 +86,12 @@ h2 {
 
 @media screen and (max-width: 768px) {
   .nav-wrapper {
-    padding-left: 15p;
-    padding-right: 15px;
+    padding-left: 0px;
+    padding-right: 0px;
+    width: 100%;
+    background: white 0% 0% no-repeat padding-box;
+    -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.06);
+            box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.06);
   }
 }
 
@@ -110,6 +114,27 @@ h2 {
   }
 }
 
+.nav-wrapper .navbar img.desktop {
+  display: block;
+}
+
+@media screen and (max-width: 600px) {
+  .nav-wrapper .navbar img.desktop {
+    display: none;
+  }
+}
+
+.nav-wrapper .navbar img.mobile {
+  display: none;
+  padding-left: 15px;
+}
+
+@media screen and (max-width: 600px) {
+  .nav-wrapper .navbar img.mobile {
+    display: block;
+  }
+}
+
 .nav-wrapper .navbar img {
   padding-top: 20px;
   width: auto;
@@ -124,6 +149,15 @@ h2 {
   display: grid;
   -ms-grid-column-align: end;
       justify-self: end;
+}
+
+@media screen and (max-width: 768px) {
+  .nav-wrapper .navbar ul li.sign__up a {
+    color: white;
+    font-family: "Helvetica Bold";
+    border: 1px solid white;
+    padding: 1em 2em;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -163,15 +197,31 @@ h2 {
 }
 
 .nav-wrapper .menu-toggle .bar {
+  margin-right: 15px !important;
   width: 25px;
   height: 3px;
   z-index: 999;
   top: 5px;
   position: relative;
-  background-color: #3f3f3f;
+  background-color: #10a3ff;
   margin: 5px auto;
   -webkit-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
+}
+
+.nav-wrapper .menu-toggle .bar:nth-child(1) {
+  position: relative;
+  right: 3px;
+}
+
+.nav-wrapper .menu-toggle .bar:nth-child(2) {
+  position: relative;
+  left: 5px;
+}
+
+.nav-wrapper .menu-toggle .bar:nth-child(3) {
+  position: relative;
+  right: 3px;
 }
 
 .nav-wrapper .menu-toggle {
@@ -186,16 +236,19 @@ h2 {
 
 .nav-wrapper #mobile-menu.is-active .bar:nth-child(2) {
   opacity: 0;
+  color: white;
 }
 
 .nav-wrapper #mobile-menu.is-active .bar:nth-child(1) {
   -webkit-transform: translateY(8px) rotate(45deg);
   transform: translateY(8px) rotate(45deg);
+  color: white;
 }
 
 .nav-wrapper #mobile-menu.is-active .bar:nth-child(3) {
   -webkit-transform: translateY(-8px) rotate(-45deg);
   transform: translateY(-8px) rotate(-45deg);
+  color: white;
 }
 
 @-webkit-keyframes gradbar {
@@ -258,7 +311,6 @@ h2 {
         -ms-flex-pack: start;
             justify-content: start;
     background-color: #002984;
-    margin-left: -30px;
     width: 100%;
     padding-top: 30%;
     height: 100vh;
@@ -360,6 +412,13 @@ h2 {
   padding-top: 7em;
 }
 
+@media screen and (max-width: 600px) {
+  .hero__section .hero__left {
+    text-align: center !important;
+    padding-top: 2em;
+  }
+}
+
 .hero__section .hero__left .curved__caption {
   background-color: rgba(16, 163, 255, 0.17);
   border-radius: 20px;
@@ -367,6 +426,13 @@ h2 {
   max-width: 200px;
   font-size: 14px;
   font-family: "Helvetica Light";
+}
+
+@media screen and (max-width: 600px) {
+  .hero__section .hero__left .curved__caption {
+    text-align: center !important;
+    margin: 0 auto;
+  }
 }
 
 @media screen and (min-width: 1600px) {
@@ -382,6 +448,12 @@ h2 {
   font-family: "Helvetica Bold";
   text-align: left;
   font-size: 45px;
+}
+
+@media screen and (max-width: 600px) {
+  .hero__section .hero__left h1 {
+    text-align: center !important;
+  }
 }
 
 .hero__section .hero__left .caption__content {
@@ -523,6 +595,7 @@ h2 {
 
 .carousel__section .carousel__caption {
   padding-bottom: 20%;
+  max-width: 400px;
 }
 
 .carousel__section .carousel__caption h1 {
@@ -539,8 +612,14 @@ h2 {
 
 .carousel__section .carousel__caption .caption__content span {
   font-family: "Helvetica Light";
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.6;
+}
+
+@media screen and (min-width: 1700px) {
+  .carousel__section .carousel__caption .caption__content span {
+    font-size: 20px;
+  }
 }
 
 .carousel__section .owl-carousel .item .box {
@@ -632,9 +711,16 @@ h2 {
   position: relative;
 }
 
+@media screen and (min-width: 1600px) {
+  .package__section {
+    margin-bottom: 12em;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .package__section {
     padding-bottom: 10em;
+    margin-bottom: 14em;
   }
 }
 
@@ -648,6 +734,12 @@ h2 {
   background-color: #10a3ff;
   border-radius: 50px;
   padding: 5em;
+}
+
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+  .package__section .curvy {
+    padding: 3em 5em;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -667,6 +759,15 @@ h2 {
   width: 45%;
   left: 1%;
   top: -35%;
+}
+
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+  .package__section .study__pack img {
+    position: absolute;
+    width: 50%;
+    left: -2%;
+    top: -25%;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -689,6 +790,12 @@ h2 {
 
 .package__section .ten .input {
   width: 80%;
+}
+
+@media screen and (max-width: 768px) {
+  .package__section .ten .input {
+    width: 100%;
+  }
 }
 
 .package__section .ten .input input {
@@ -783,6 +890,18 @@ h2 {
   font-size: 14px;
 }
 
+@media screen and (max-width: 768px) {
+  .bottom__footer .left {
+    text-align: center;
+    position: relative;
+    padding-top: 20px;
+  }
+}
+
+.bottom__footer .right {
+  visibility: hidden;
+}
+
 .bottom__footer .right span {
   font-family: "Helvetica Bold" !important;
   font-size: 14px;
@@ -791,6 +910,7 @@ h2 {
 @media screen and (min-width: 768px) {
   .bottom__footer .right {
     text-align: right;
+    visibility: visible;
   }
 }
 
@@ -803,5 +923,29 @@ h2 {
   min-height: 400px;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.is-active span {
+  background-color: white !important;
+}
+
+.mobile__call {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .mobile__call {
+    display: block;
+  }
+  .mobile__call span {
+    display: block;
+    padding-top: 8px;
+    color: white;
+  }
+  .mobile__call span img {
+    padding-right: 10px;
+    position: relative;
+    top: 3px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
