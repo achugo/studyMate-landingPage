@@ -34,6 +34,13 @@ h1 {
   font-size: 2.2rem;
 }
 
+@media screen and (max-width: 768px) {
+  h1 {
+    letter-spacing: 1px !important;
+    line-height: 1.1 !important;
+  }
+}
+
 h2 {
   color: #000;
   font-size: 1.3rem;
@@ -506,6 +513,13 @@ h2 {
   border-radius: 16px;
   opacity: 1;
   padding: 2em 1em;
+}
+
+@media screen and (max-width: 768px) {
+  .inhome__tutor .boxes .box {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
 }
 
 .inhome__tutor .boxes .box img {
